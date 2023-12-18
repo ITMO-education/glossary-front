@@ -1,0 +1,20 @@
+:root {
+  font-family: Roboto;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: #FFB02E;
+  height: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+
