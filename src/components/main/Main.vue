@@ -28,6 +28,6 @@ export default {
 <style>
 .main-words {
   flex: 1 0 auto;
-  background-color: #343434;
+  background-color: #dcdcdc;
 }
 </style>

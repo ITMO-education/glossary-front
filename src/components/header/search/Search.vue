@@ -1,7 +1,9 @@
 <template>
   <div class="search search-btn">
     <button class="btn-btn">Глоссарий</button>
-    <button class="btn-btn">Граф</button>
+    <button
+        class="btn-btn"
+        v-on:click="toggleGraph">Граф</button>
   </div>
   <div class="search search-str">
     <input
@@ -34,12 +36,17 @@ export default {
   },
   components: {},
   methods: {
-    search() {
-      SearchPostsViaAPI(this.searchText)
-    },
-    clear() {
-      GetPostsViaAPI()
-    }
+      search() {
+        SearchPostsViaAPI(this.searchText)
+      },
+      toggleGraph() {
+        store.commit('toggleGraph')
+        if (store.getters.getGraphEnabled) {
+          this.toggleButtonName = "Глоссарий"
+        } else {
+          this.toggleButtonName = "Граф"
+        }
+      }
   },
   computed: {
     store() {
